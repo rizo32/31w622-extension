@@ -1,1 +1,16 @@
-/*# sourceMappingURL=style.css.map */
+.carrousel {
+  position: absolute;
+  left: 25vw;
+  top: 25vw;
+  width: 50vw;
+  height: 50vh;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  background-color: beige;
+}
+
+.carrousel--ouvrir {
+  opacity: 1;
+  transform: scale(1);
+}/*# sourceMappingURL=style.css.map */

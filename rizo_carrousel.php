@@ -27,17 +27,17 @@ wp_enqueue_scripts // le hook
 */
 
 function rizo_enqueue() {
-    $version_css = filemtime(plugin_dir_path(__FILE__));
+    $version_css = filemtime(plugin_dir_path(__FILE__) . "style.css");
     $version_js = filemtime(plugin_dir_path(__FILE__) . "js/carrousel.js");
 
-    wp_enqueue_style("rizo_carrousel",
+    wp_enqueue_style("rizo_carrousel_css",
                       plugin_dir_url(__FILE__) . "style.css",
                       array(),
                       $version_css,
                       false);
     
 
-    wp_enqueue_script("rizo_carrousel",
+    wp_enqueue_script("rizo_carrousel_js",
                       plugin_dir_url(__FILE__) . "js/carrousel.js",
                       array(),
                       $version_js,
@@ -52,16 +52,21 @@ add_action("wp_enqueue_scripts", "rizo_enqueue");
 function boite_carrousel(){
     /////////////////////////////////////// HTML
     // Le conteneur d'une boîte
-    $contenu = 
-      `<section class='carrousel'>
-      <button class="carrousel--fermer>X<button>
-      <figure class="carrousel__figure></figure>
-      <form class="carrousel__form"></form>
-      </section><!-- fin class="carrousel" -->`;
+    $contenu =
+
+
+    "
+    <button class='bouton'>Ouvrir le carrousel</button>
     
-    return $contenu;
+    <div class='carrousel'>"
+    . '<button class="carrousel__x">X<button>'
+    . '<figure class="carrousel__figure"></figure>'
+    . '<form class="carrousel__form"></form>'
+    . '</div> <!-- fin class="carrousel" -->';
+
+return $contenu;
 }
-   add_shortcode('mon_html', 'boite_carrousel');
+   add_shortcode('rizo_carrousel', 'boite_carrousel');
 
 
 

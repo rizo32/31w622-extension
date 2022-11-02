@@ -49,7 +49,7 @@ add_action("wp_enqueue_scripts", "rizo_enqueue");
 
 
 
-function boite_carrousel(){
+function rizo_boite_carrousel(){
     /////////////////////////////////////// HTML
     // Le conteneur d'une boîte
     $contenu =
@@ -66,7 +66,7 @@ function boite_carrousel(){
 
 return $contenu;
 }
-   add_shortcode('rizo_carrousel', 'boite_carrousel');
+   add_shortcode('rizo_carrousel', 'rizo_boite_carrousel');
 
 
 

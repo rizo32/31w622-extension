@@ -14,4 +14,23 @@
 .carrousel--ouvrir {
   opacity: 1;
   transform: scale(1);
+}
+
+.carrousel__x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.carrousel__figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.carrousel__figure_img {
+  object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

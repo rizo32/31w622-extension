@@ -14,7 +14,7 @@
         for(const elmImg of elmGalerieImg){
             console.log(elmImg.getAttribute('src'));
             let elmImg = document.createElement('img');
-            log(elmImg)
+            
         }
     })
 

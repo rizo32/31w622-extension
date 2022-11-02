@@ -59,7 +59,7 @@ function rizo_boite_carrousel(){
     <button class='bouton'>Ouvrir le carrousel</button>
     
     <div class='carrousel'>"
-    . '<button class="carrousel__x">X<button>'
+    . '<button class="carrousel__x">X</button>'
     . '<figure class="carrousel__figure"></figure>'
     . '<form class="carrousel__form"></form>'
     . '</div> <!-- fin class="carrousel" -->';

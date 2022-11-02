@@ -13,9 +13,8 @@
         console.log("ouverture du carrousel!");
         elmCarrousel.classList.add('carrousel--ouvrir');
         for(const elmImg of elmGalerieImg){
-            console.log(elmImg.getAttribute('src'));
             let elmCarrouselImg = document.createElement('img');
-            elmCarrousel.setAttribute('src', elmCarrouselImg.getAttribute('src'));
+            elmCarrouselImg.setAttribute('src', elmImg.getAttribute('src'));
             elmCarrousel.classList.add('carrousel__figure__img');
             elmCarrousel__figure.appendChild(elmCarrouselImg);
 

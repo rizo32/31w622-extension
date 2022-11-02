@@ -1,6 +1,6 @@
 .carrousel {
     position: absolute;
-    left: 25vw;
+    left: 30vw;
     top: 25vw;
 
     width: 50vw;
@@ -9,7 +9,7 @@
     transform: scale(0);
     opacity: 0;
     transition: transform .5s, opacity .5s;
-    background-color: beige;
+    background-color: rgb(112, 112, 0);
 
     z-index: 1;
 }

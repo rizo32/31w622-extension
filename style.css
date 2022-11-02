@@ -1,5 +1,5 @@
 .carrousel {
-  position: absolute;
+  position: fixed;
   left: 30vw;
   top: 25vw;
   width: 50vw;

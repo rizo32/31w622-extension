@@ -37,8 +37,25 @@
   justify-content: center;
 }
 
-.carrousel__figure img {
+.carrousel__figure__img {
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.carrousel__figure__img--activer {
+  opacity: 1;
+}
+
+.carrousel__form {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.carrousel__form__rad {
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */

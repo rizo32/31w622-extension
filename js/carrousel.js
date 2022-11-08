@@ -46,16 +46,20 @@
         elmCarrousel__form.appendChild(elmCarrousel__form__radio);
         elmCarrousel__form__radio.addEventListener('mousedown', function(){
             if(dernierIndex){
-                log(this.dataset.index);
                 elmCarrousel__figure.children[dernierIndex].classList.remove("carrousel__figure__img--activer");
-                dernierIndex = this.dataset.index;
             } 
-                elmCarrousel__figure.children[dataset.index].classList.add("carrousel__figure__img--activer");
-                dernierIndex = this.dataset.index;
+            console.log(this.dataset.index);
+            elmCarrousel__figure.children[dataset.index].classList.add("carrousel__figure__img--activer");
+            dernierIndex = this.dataset.index;
         });
     }
 
+    /**
+     * 
+     * @param {object dom} elmImg 
+     */
     function ajout_img_dans_carrousel(elmImg) {
+        elmImg.dataset.index = index
         let elmCarrouselImg = document.createElement('img');
         elmCarrouselImg.setAttribute('src', elmImg.getAttribute('src'));
         elmCarrousel.classList.add('carrousel__figure__img');

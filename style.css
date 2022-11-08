@@ -23,9 +23,9 @@
   position: absolute;
   left: calc(100% - 2rem);
   width: 2rem;
-  font-family: sans-serif;
   height: 2rem;
-  z-index: 1;
+  font-family: sans-serif;
+  z-index: 2;
   opacity: 0.8;
 }
 

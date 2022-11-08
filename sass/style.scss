@@ -20,17 +20,17 @@
 }
 
 .carrousel__x {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; // perso
+    justify-content: center; // perso
+    align-items: center; // perso
     position: absolute;
     left: calc(100% - 2rem);
     // left: 0;
     // top: 0;
     width: 2rem;
-    font-family: sans-serif;
     height: 2rem;
-    z-index: 1;
+    font-family: sans-serif;
+    z-index: 2;
     opacity: 0.8;
 }
 

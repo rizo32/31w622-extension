@@ -1,5 +1,4 @@
 (function(){
-    let log = console.log;
     console.log("carrousel");
     // Faudrait idéalement que ".galarie" soit une variable pour que ça s'applique à n'importe quel type d'élément
     let elmGalerie = document.querySelector('.galerie');
@@ -17,10 +16,25 @@
         elmCarrousel.classList.add('carrousel--ouvrir');
         for(const elmImg of elmGalerieImg){
             ajout_img_dans_carrousel(elmImg);
-            ajout_radio_dans_carrousel();  
+            ajout_radio_dans_carrousel();
+            elmImg.addEventListener('mousedown', function(){
+
+            if (dernierIndex)
+            {
+                elmCarrousel__figure.children[dernierIndex].classList.remove('carrousel__figure__img--activer')  
+            }
+            console.log(this.dataset.index)
+            elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel__figure__img--activer')
+            dernierIndex = this.dataset.index
+        
+            })  
         }
     })
 
+    /**
+     *   Ajout d'une img dans le carrousel
+     * @param {object dom}
+    */
     function ajout_radio_dans_carrousel(){
         let elmCarrousel__form__radio = document.createElement("input");
         elmCarrousel__form__radio.setAttribute('type', 'radio');

@@ -26,7 +26,6 @@
     function ajout_img_dans_carrousel(elmImg){
         elmImg.dataset.index = index;
         let elmCarrouselImg = document.createElement('img');
-        //console.log(elmImg.getAttribute('src'));
         elmCarrouselImg.setAttribute('src', elmImg.getAttribute('src'));
         elmCarrouselImg.classList.add('carrousel__figure__img');
         elmCarrousel__figure.appendChild(elmCarrouselImg);

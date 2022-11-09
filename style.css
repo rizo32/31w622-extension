@@ -2,12 +2,12 @@
   position: absolute;
   left: 20vw;
   top: 20vh;
-  width: 60vw;
+  width: 50vw;
   height: 60vh;
   transform: translateY(-100%);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
   border-radius: 20px;
 }
@@ -22,10 +22,12 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: calc(100% - 2rem);
-  width: 2rem;
-  height: 2rem;
+  left: calc(100% - 3rem);
+  width: 3rem;
+  height: 3rem;
+  padding: 25px;
   font-family: sans-serif;
+  font-size: 48px;
   z-index: 2;
   border-radius: 0 20px 0 0;
 }
@@ -83,7 +85,7 @@
 .fleches div {
   height: 100%;
   width: 50px;
-  font-size: 72px;
+  font-size: 96px;
   font-family: sans-serif;
   color: white;
   padding: 10px;

@@ -8,6 +8,7 @@
     let elmCarrousel__form = document.querySelector('.carrousel__form');
     let index = 1;
     let dernierIndex;
+    let carrouselMinuterie;
 
 
     /* Ajout des images/radio dans carrousel */
@@ -32,6 +33,8 @@
         elmImg.addEventListener('mousedown', function(e){
             elmCarrousel.classList.add('carrousel--ouvrir');
             activation_image_dans_carrousel(e);
+            clearInterval(carrouselMinuterie);
+            carrouselMinuterie = setInterval(changerImageSuivante, 3000);
         })
     }
 
@@ -60,27 +63,34 @@
 
     /* FERMER CARROUSEL */
     elmCarrousel__x.addEventListener('mousedown', function(){
+        clearInterval(carrouselMinuterie);
         elmCarrousel.classList.remove('carrousel--ouvrir');
     })
 
 
+
     /*****************  FLÈCHES CARROUSEL *******************/
-    elmCarrousel__flecheGauche.addEventListener('mousedown', function(e){
+    elmCarrousel__flecheGauche.addEventListener('mousedown', changerImagePrecedente);
+
+    elmCarrousel__flecheDroite.addEventListener('mousedown', changerImageSuivante);
+
+    function changerImagePrecedente(){
         index=dernierIndex;
         index--;
         if(index<1){
             index=3;
         }
         activation_image_dans_carrousel_avec_fleche()
-    })
-    elmCarrousel__flecheDroite.addEventListener('mousedown', function(){
+    }
+
+    function changerImageSuivante(){
         index=dernierIndex;
         index++;
         if(index>3){
             index=1;
         }
         activation_image_dans_carrousel_avec_fleche()
-    })
+    }
         
     function activation_image_dans_carrousel_avec_fleche(){
         if(dernierIndex){

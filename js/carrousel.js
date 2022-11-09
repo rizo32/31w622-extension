@@ -33,8 +33,6 @@
         elmImg.addEventListener('mousedown', function(e){
             elmCarrousel.classList.add('carrousel--ouvrir');
             activation_image_dans_carrousel(e);
-            clearInterval(carrouselMinuterie);
-            carrouselMinuterie = setInterval(changerImageSuivante, 3000);
         })
     }
 
@@ -59,6 +57,8 @@
         elmCarrousel__figure.children[e.target.dataset.index].classList.add('carrousel__figure__img--activer');
         elmCarrousel__form.children[parseInt(e.target.dataset.index)-1].checked = true;
         dernierIndex = e.target.dataset.index;
+        clearInterval(carrouselMinuterie);
+        carrouselMinuterie = setInterval(changerImageSuivante, 3000);
     }
 
     /* FERMER CARROUSEL */
@@ -99,6 +99,8 @@
         elmCarrousel__figure.children[index].classList.add('carrousel__figure__img--activer');
         elmCarrousel__form.children[parseInt(index)-1].checked = true;
         dernierIndex = index;
+        clearInterval(carrouselMinuterie);
+        carrouselMinuterie = setInterval(changerImageSuivante, 3000);
     }
 
 })()

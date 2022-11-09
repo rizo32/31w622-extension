@@ -5,16 +5,17 @@
     top: 20vh; //25vh;
     width: 60vw; // 50vw;
     height: 60vh; // 50vh;
-    transform: scale(0); // on devrait personnaliser ceci
+    transform: translateY(-100%); // on devrait personnaliser ceci
     opacity: 0;
     transition: transform .5s, opacity .5s;
-    background-color: rgb(112, 112, 0); // sera une image
+    background-color: rgba(0, 0, 0, 0); // sera une image
     z-index: 1;
+    border-radius: 20px;
 }
 
 .carrousel--ouvrir {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
 }
 
 .carrousel__x {
@@ -31,6 +32,7 @@
     font-family: sans-serif;
     z-index: 2;
     // opacity: 0.8;
+    border-radius: 0 20px 0 0;
 }
 
 .carrousel__figure {
@@ -42,16 +44,19 @@
     top: 0;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
+    align-items: center;
 }
 
 .carrousel__figure__img {
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     transition: opacity .5s;
+    border-radius: 10px;
 }
 
 .carrousel__figure__img--activer {
@@ -62,9 +67,32 @@
     display: flex;
     position: absolute;
     bottom: 0;
-    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
 }
 
 .carrousel__form__rad {
     z-index: 2;
+    height: 100%;
 }
+
+.fleches {
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+
+.fleches div {
+    height: 100%;
+    width: 50px;
+    font-size: 72px;
+    font-family: sans-serif;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+

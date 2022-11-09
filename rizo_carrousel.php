@@ -46,21 +46,21 @@ function rizo_enqueue() {
 
 add_action("wp_enqueue_scripts", "rizo_enqueue");
 
-
-
-
 function rizo_boite_carrousel(){
     /////////////////////////////////////// HTML
     // Le conteneur d'une boîte
     $contenu =
 
 
-    "
-    <button class='bouton'>Ouvrir le carrousel</button>
-    
+    "   
     <div class='carrousel'>"
     . '<button class="carrousel__x">X</button>'
-    . '<figure class="carrousel__figure"></figure>'
+    . '<figure class="carrousel__figure">'
+    .     '<div class="fleches">'
+    .            '<div><</div>'
+    .            '<div>></div>'
+    .    '</div>'
+    .    '</figure>'
     . '<form class="carrousel__form"></form>'
     . '</div> <!-- fin class="carrousel" -->';
 

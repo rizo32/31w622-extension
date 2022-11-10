@@ -78,7 +78,7 @@
         index=dernierIndex;
         index--;
         if(index<1){
-            index=3;
+            index=elmGalerieImg.length;
         }
         activation_image_dans_carrousel_avec_fleche()
     }
@@ -86,7 +86,7 @@
     function changerImageSuivante(){
         index=dernierIndex;
         index++;
-        if(index>3){
+        if(index>elmGalerieImg.length){
             index=1;
         }
         activation_image_dans_carrousel_avec_fleche()

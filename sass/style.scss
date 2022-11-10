@@ -72,7 +72,9 @@
 
 .carrousel__form__rad {
     z-index: 2;
+    width: 25px;
     height: 100%;
+    margin-right: 20px;
 }
 
 .fleches {
@@ -92,5 +94,11 @@
     padding: 10px;
     cursor: pointer;
     z-index: 2;
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    
 }
 

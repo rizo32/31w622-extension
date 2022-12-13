@@ -8,7 +8,7 @@
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s ease-out;
   border-left: 20vw solid rgba(0, 0, 0, 0);
-  border-right: 20vw solid rgba(0, 0, 0, 0);
+  border-right: 19vw solid rgba(0, 0, 0, 0);
   border-top: 15vh solid rgba(0, 0, 0, 0);
   border-bottom: 15vh solid rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0.6);
@@ -102,4 +102,4 @@
 .radio {
   display: inline-flex;
   align-items: center;
-}
+}/*# sourceMappingURL=style.css.map */
